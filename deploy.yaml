@@ -22,6 +22,6 @@ spec:
     spec:
       containers:
           - name: mycont1
-            image: karthik621/galaxy:latest
+            image: karthik621/galaxy:v1
             ports:
               - containerPort: 80
