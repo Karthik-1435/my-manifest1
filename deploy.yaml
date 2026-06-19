@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: mydeploy
+  labels:
+    app: swiggy
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: swiggy
+
+  template:
+    metadata:
+      labels:
+        app: swiggy
+
+    spec:
+      containers:
+          - name: mycont1
+            image: karthik621/galaxy:latest
+            ports:
+              - containerPort: 80
